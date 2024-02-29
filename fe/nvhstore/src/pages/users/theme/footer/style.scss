@@ -2,6 +2,10 @@
 @import "style/pages/theme";
 
 .footer{
+    background: #F3F6FA;
+    padding: 70px;
+    padding-bottom: 0;
+
     .footer__about {
         margin-bottom: 30px;
 
@@ -15,6 +19,97 @@
             color: map.get($theme-color, "normal-text");
             line-height: 36px;
             list-style: none;
+        }
+    }
+
+    .footer__widget {
+        margin-bottom: 30px;
+        overflow: hidden;
+
+        h3 {
+            color: map.get($theme-color, "normal-text");
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        ul {
+            float: left;
+            width: 50%;
+
+            li {
+                list-style: none;
+
+                a {
+                    color: map.get($theme-color, "normal-text");
+                    font-size: 14px;
+                    line-height: 32px;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        p {
+            font-size: 14px;
+            color: map.get($theme-color, "normal-text");
+            margin-bottom: 10px;
+        }
+
+        form {
+            margin-bottom: 30px;
+
+            .input-group {
+                display: flex;
+                align-items: center;
+                
+                input {
+                    width: 100%;
+                    font-size: 16px;
+                    padding-left: 20px;
+                    color: map.get($theme-color, "normal-text");
+                    height: 46px;
+                    border: 1px solid #ededed;
+
+                    ::placeholder {
+                        color: map.get($theme-color, "normal-text");
+                    }
+                }
+
+                button {
+                    padding: 0 26px;
+                    height: 46px;
+                    min-width: max-content;
+                }
+            }
+
+            
+        }
+
+    }
+    
+    .footer__widget__social{
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        margin-top: 20px;
+
+        div {
+            // margin-right: 10px;
+            :hover {
+                background: map.get($theme-color, "main");
+                color: white;
+                border-color: white ;
+            }
+
+            svg {
+                font-size: 20px;
+                padding: 10px;
+                color: #404040;
+                border: 1px solid #ededed;
+                border-radius: 50%;
+                transition: all 0.3s;
+                background: white;
+                cursor: pointer;
+            }
         }
     }
 
