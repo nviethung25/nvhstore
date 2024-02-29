@@ -41,6 +41,18 @@ body {
     max-width: 50%;
 }
 
+.button-submit {
+    font-size: 14px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 16px 30px 17px;
+    background: map.get($theme-color, "main");
+    border: none;
+    height: 100%;
+}
+
 @include Responsive($DESKTOP) {
     .col-xl-3 {
         flex: 0 0 25%;
@@ -52,6 +64,18 @@ body {
     }
 }
 
+@include Responsive($TABLET_DEVICE) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-md-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
 @include Responsive($MEDIUM_DEVICE) {
     .col-lg-3 {
         flex: 0 0 25%;
@@ -59,6 +83,20 @@ body {
     }
 }
 
+@include Responsive($WIDE_MOBILE) {
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-sm-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
 @include Responsive($SMALL_DEVICES) {
-   
+    .col-xs-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
