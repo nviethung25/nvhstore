@@ -76,6 +76,7 @@
     ul {
         display: flex;
         justify-content: space-between;
+        position: relative;
 
         li {
             list-style: none;
@@ -93,9 +94,38 @@
             }
         }
 
+        li:hover .header__menu__dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
+
         .active a {
             color: map.get($theme-color, "main");
 
+        }
+
+        .header__menu__dropdown {
+            background: whitesmoke;
+            display: block;
+            position: absolute;
+            width: 180px;
+            z-index: 9;
+            padding: 5px 0;
+            transition: all, 0.3s;
+            opacity: 0;
+            visibility: hidden;
+
+            li {
+                a {
+                    text-transform: capitalize;
+                    font-size: 400;
+                    padding: 5px 15px;
+                }
+
+                :hover {
+                    color: map.get($theme-color, "main");
+                }
+            }
         }
     }
 }
