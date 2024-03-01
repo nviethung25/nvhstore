@@ -5,6 +5,7 @@ import {
   AiOutlineGooglePlus,
   AiOutlineInstagram,
   AiOutlineMail,
+  AiOutlineMenu,
   AiOutlineShoppingCart,
   AiOutlineTwitter,
   AiOutlineUser,
@@ -15,7 +16,8 @@ import { fomatter } from "utils/fomater";
 import { ROUTERS } from "utils/router";
 
 const Header = () => {
-  const [menu, setMenu] = useState([
+  const [isShowCategories, setShowCategories] = useState(true);
+  const [menu] = useState([
     {
       name: "Trang chủ",
       path: ROUTERS.USER.HOME,
@@ -141,6 +143,40 @@ const Header = () => {
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row hero__categories_container">
+          <div className="col-lg-3 hero__categories">
+            <div
+              className="hero__categories__all"
+              onClick={() => setShowCategories(!isShowCategories)}
+            >
+              <AiOutlineMenu />
+              Danh sách sản phẩm
+            </div>
+            <ul className={isShowCategories ? "" : "hidden"}>
+              <li>
+                <Link to="#">Thịt tươi</Link>
+              </li>
+              <li>
+                <Link to="#">Rau củ</Link>
+              </li>
+              <li>
+                <Link to="#">Nước trái cây</Link>
+              </li>
+              <li>
+                <Link to="#">Trái cây</Link>
+              </li>
+              <li>
+                <Link to="#">Hải sản</Link>
+              </li>
+              <li>
+                <Link to="#">Thức ăn nhanh</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col-lg-9">Phai</div>
         </div>
       </div>
     </>
