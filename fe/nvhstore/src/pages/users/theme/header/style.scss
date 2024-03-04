@@ -1,6 +1,8 @@
 @use "sass:map";
 @import "style/pages/theme";
 
+$bannerImg: "/assets/users/images/hero/banner.jpeg";
+
 .header__top {
     background: #f5f5f5;
 }
@@ -229,3 +231,131 @@
     }
 }
 
+.hero__search_container {
+    
+    .hero__search__form {
+        width: 650px;
+        height: 50px;
+        float: left;
+        padding-left: 15px;
+        margin-bottom: 30px;
+
+        form {
+            display: flex;
+            align-items: center;
+        }
+
+        input {
+            border: none;
+            height: 48px;
+            font-size: 16px;
+            color: #b2b2b2;
+            padding-left: 20px;
+            border: 1px solid #ebebeb;
+            width: 70%;
+
+        :focus {
+            outline: none;
+            border: none;
+        }
+    }
+
+        button {
+            font-size: 14px;
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 17px 20px 17px;
+            background: map.get($theme-color, "main");
+            border: none;
+            height: 49px;
+        }
+    }
+        
+    .hero__search__phone {
+        display: flex;
+        align-items: center;
+
+        .hero__search__phone__icon {
+            font-size: 25px;
+            color: map.get($theme-color, "main");
+            padding: 10px;
+            background: #f5f5f5;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            float: left;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero__search__phone__text {
+            display: inline-block;
+
+            p {
+                color: map.get($theme-color, "normal-text");
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            span {
+                color: #6f6f6f;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .hero__item {
+        margin-left: 15px;
+        background-image: url($bannerImg);
+        background-size: cover;
+        height: 410px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .hero__text {
+            padding-left: 70px;
+
+            span {
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 4px;
+                color: map.get($theme-color, "main");
+            }
+
+            h2 {
+                font-size: 45px;
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: 52px;
+                letter-spacing: 4px;
+                color: map.get($theme-color, "bold-text");
+                margin: 10px 0;
+            }
+
+            p {
+                font-size: 16px;
+                color: #6f6f6f;
+                font-weight: 400;
+                line-height: 26px;
+                margin: 0 0 15px 0;
+            }
+
+            a {
+                display: inline-block;
+                font-size: 14px;
+                padding: 10px 28px 10px;
+                color: white;
+                text-transform: uppercase;
+                background: map.get($theme-color, "main");
+                letter-spacing: 2px;
+                text-decoration: none;
+            }
+        }
+    }
+}
