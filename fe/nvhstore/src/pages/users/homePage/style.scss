@@ -1,0 +1,44 @@
+@use "sass:map";
+@import "style/pages/theme";
+@import "style/pages/all";
+
+.container__categories_slider {
+    max-width: 1200px !important;
+    margin-top: 30px !important;
+
+    .categories_slider {
+        .categories_slider_item {
+            height: 300px;
+            width: 100%;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            border-radius: 5px;
+
+            p {
+                position: absolute;
+                left: 5%;
+                bottom: 10px;
+                text-align: center;
+                font-size: 18px;
+                color: map.get($theme-color, "normal-text");
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                padding: 12px 0 10px;
+                width: 270px;
+                cursor: pointer;
+
+                &:hover {
+                    background: rgb(237 237 237);
+                }
+            }
+        }
+
+        .react-multi-carousel-item:not(:first-child):not(:last-child) {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+    }
+}
