@@ -1,7 +1,7 @@
 import { memo } from "react";
 import Header from "../header";
 import Footer from "../footer";
-import HomePage from "../..";
+// import HomePage from "../..";
 
 const MasterLayout = ({ children, ...props }) => {
   return (

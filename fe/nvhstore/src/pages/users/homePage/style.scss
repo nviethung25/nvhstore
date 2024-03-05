@@ -19,7 +19,7 @@
             p {
                 position: absolute;
                 left: 5%;
-                bottom: 10px;
+                bottom: 5px;
                 text-align: center;
                 font-size: 18px;
                 color: map.get($theme-color, "normal-text");
@@ -31,7 +31,7 @@
                 cursor: pointer;
 
                 &:hover {
-                    background: rgb(237 237 237);
+                    color: map.get($theme-color, "main");
                 }
             }
         }
@@ -39,6 +39,49 @@
         .react-multi-carousel-item:not(:first-child):not(:last-child) {
             margin-right: 5px;
             margin-left: 5px;
+        }
+    }
+}
+
+.featured {
+    margin-top: 50px;
+
+    .section-title {
+        margin-bottom: 50px;
+        text-align: center;
+        
+        h2 {
+            position: relative;
+        }
+
+        h2:after {
+            position: absolute;
+            left: 0;
+            bottom: -15px;
+            right: 0;
+            height: 4px;
+            width: 80px;
+            background: map.get($theme-color, "main");
+            content: "";
+            margin: 0 auto;
+        }
+    }
+
+    .react-tabs {
+        ul {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        li {
+            list-style: none;
+            font-size: 18px;
+            color: map.get($theme-color, "normal-text");
+            display: inline-block;
+            margin-right: 25px;
+            position: relative;
+            cursor: pointer;
         }
     }
 }
